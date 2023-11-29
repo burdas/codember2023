@@ -1,4 +1,4 @@
-with open('D:\Proyectos\codember2023\CHALLENGE03\input.txt', 'r') as archivo:
+with open('./input.txt', 'r') as archivo:
     i = 0
     for line in archivo:
         min = int(line.split(":")[0].split(" ")[0].split("-")[0])
@@ -7,6 +7,6 @@ with open('D:\Proyectos\codember2023\CHALLENGE03\input.txt', 'r') as archivo:
         password = line.split(":")[1].strip()
         if min > password.count(letra) or password.count(letra) > max:
             i += 1
-        if i == 42:
+        if i == 13:
             print(password)
             exit()
